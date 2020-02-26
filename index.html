@@ -11,7 +11,25 @@
     </head>
     <body>
         <div id="app">
-            <nav class="navbar is-dark is-bold" role="navigation" aria-label="main navigation"> <div class="navbar-brand">{{title}}<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"> <span aria-hidden="true"></span> <span aria-hidden="true"></span> <span aria-hidden="true"></span> </a> </div> <div id="navbarBasicExample" class="navbar-menu"> <div class="navbar-start"> <a class="navbar-item"> Home </a> <a class="navbar-item"> Codes </a> <a class="navbar-item"> About </a> <a class="navbar-item"> Contact </a> </div> </div> </nav>
+            <nav class="navbar is-dark is-bold" role="navigation" aria-label="main navigation"> <div class="navbar-brand">{{title}}<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample"> <span aria-hidden="true"></span> <span aria-hidden="true"></span> <span aria-hidden="true"></span> </a> </div> <div id="navbarBasicExample" class="navbar-menu"> <div class="navbar-start"> <a class="navbar-item"> Home </a> <a class="navbar-item"> 
+                <div class="dropdown is-hoverable">
+  <div class="dropdown-trigger">
+    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+      <span>Codes</span>
+      <span class="icon is-small">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+    <div class="dropdown-content">
+      <div class="dropdown-item">
+        <p><a href="#">File Uploader</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+                </a> <a class="navbar-item"> About </a> <a class="navbar-item"> Contact </a> </div> </div> </nav>
             <section class="hero is-danger is-bold">
                 <div class="hero-body">
                     <div class="container">
@@ -37,6 +55,31 @@
                 </div>
             </footer>
         </div>
+        
         <script src="index.js"></script>
-    </body>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-storage.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAlj3V2RxBmiriDMMrFPbxnI-aXw_-t_iw",
+    authDomain: "code-infinity.firebaseapp.com",
+    databaseURL: "https://code-infinity.firebaseio.com",
+    projectId: "code-infinity",
+    storageBucket: "code-infinity.appspot.com",
+    messagingSenderId: "528181701291",
+    appId: "1:528181701291:web:3993e41ec441072e2865ee",
+    measurementId: "G-DBQSRQ6G8R"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+        </body>
 </html>
